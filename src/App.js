@@ -1,23 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+
+import Home from './pages/Home';
+import AboutUs from './pages/AboutUs';
+import Products from './pages/Products';
+
+
+// // Import Poppins font weights
+// import '@fontsource/poppins/400.css';  // font-normal
+// import '@fontsource/poppins/500.css';  // font-medium
+// import '@fontsource/poppins/600.css';  // font-semibold
+// import '@fontsource/poppins/700.css';  // font-bold
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App font-sans min-h-screen bg-gray-50">
+      <Router>
+        <Routes>
+          
+          <Route path="/" element={<Home />} />
+          <Route path="/aboutus" element={<AboutUs />} />
+          <Route path="/products" element={<Products />} />
+
+          {/* Add more routes as needed */}
+        </Routes>
+      </Router>
     </div>
   );
 }
