@@ -95,9 +95,9 @@ const Navbar = () => {
 
               {[
                 { href: "#", text: "Partnership Program" },
-                { href: "/products", text: "Products" },
+                { href: "#", text: "Products" },
                 { href: "/aboutus", text: "About Us" },
-                { href: "", text: "Contact Us" },
+                { href: "#", text: "Contact Us" },
               ].map((item, index) => (
                 <a
                   key={index}
